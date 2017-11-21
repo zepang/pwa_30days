@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="manifest" href="/manifest.json">
+  <title>PWA TO-DO List</title>
+</head>
+<body>
+<header class="header">
+  <img src="./images/todo.png" alt="" class="logo">
+  <div class="unfinished">
+    <span class="count">0</span>
+    <span>个未完成</span>
+  </div>
+</header>
+<div id="todo-input" class="input-content df">
+  <img src="./images/add.png" alt="" class="add">
+  <input type="text" id="todo-input" placeholder="press Enter to input content!" class="input">
+</div>
+<ul id="todo-list">
+  <li class="list">
+    <a class="finish" data-id="0"></a>
+    <p class="desc" data-id="0">
+      000000
+    </p>
+    <a class="del" data-id="0"></a>
+  </li>
+  <li class="list">
+    <a href="" class="unfinish" data-id="0"></a>
+    <p class="desc" data-id="0">
+      000000
+    </p>
+    <a href="" class="del" data-id="0"></a>
+  </li>
+</ul>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+    .then(reg => console.log('SW registered!', reg))
+    .catch(err => console.log('Error!', err));
+  }
+</script>
+<script src="./main.js"></script>
+</body>
+</html>

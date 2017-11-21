@@ -1,0 +1,30 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "name": "Anna"
+    }
+  ],
+  "todolist": [
+    {
+      "id": 1,
+      "isComplete": true,
+      "desc": "此任务已经完成"
+    },
+    {
+      "desc": "新增一个",
+      "isComplete": false,
+      "id": 3
+    },
+    {
+      "desc": "新增第二个",
+      "isComplete": false,
+      "id": 4
+    },
+    {
+      "desc": "新增第四个",
+      "isComplete": true,
+      "id": 6
+    }
+  ]
+}
